@@ -1128,7 +1128,7 @@ if prompt_yn "" N; then
         sudo update-locale
     fi
 
-    sudo apt-get -y install bc jq ntpdate bash-completion || die "Couldn't install bc etc."
+    sudo apt-get -y --force-yes install bc jq ntpdate bash-completion || die "Couldn't install bc etc."
     cd $directory || die "Can't cd $directory"
     do_openaps_import $HOME/src/oref0/lib/oref0-setup/supermicrobolus.json
 
